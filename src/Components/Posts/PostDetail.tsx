@@ -3,7 +3,7 @@ import type Post from "../../PostType";
 
 function PostDetail({ post }: { post: Post }) {
   return (
-    <div>
+    <div className="container">
       <div>
         <h1>{post.title}</h1>
         <h2>{`Viết bởi: ${post.author}`}</h2>

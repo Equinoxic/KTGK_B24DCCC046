@@ -69,6 +69,7 @@ function PostForm({
         borderRadius: "10px",
         boxShadow: "0 2px 6px rgba(0,0,0,0.06)",
       }}
+      className="container"
       onSubmit={handleSubmit}
     >
       <label htmlFor="title">Tiêu đề:</label>
