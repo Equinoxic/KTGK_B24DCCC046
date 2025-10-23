@@ -16,16 +16,23 @@ function PostCard({ id, pic, title, author, date, desc }: Post) {
     <div style={{
       borderRadius: "10px",
       boxShadow: "0 2px 6px rgba(0,0,0,0.06)",
-      display: "flex"
+      display: "flex",
+      flexDirection: "column",
+      padding: "4px 12px",
+      backgroundColor: "white",
+      justifyItems: "space-between",
+      height: "100%"
     }} key={id}>
       <div>
         <h2>{title}</h2>
         <h3>{author}</h3>
       </div>
-        <img src={pic} />
+      <div style={{ display: "flex", fontSize: 20, gap: 10 }}>
+        <img src={pic} width={200} height={250}/>
         <p>{desc}</p>
-      <div>
-        <p><small>{date}</small></p>
+      </div>
+      <div style={{ display: "flex", alignSelf: "flex-end", justifySelf: "flex-end", marginTop: "auto" }}>
+        <p><small>{new Date(date).toLocaleDateString()}</small></p>
       </div>
     </div>
   )

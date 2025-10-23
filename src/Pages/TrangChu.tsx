@@ -5,7 +5,7 @@ function TrangChu() {
   
 
   return (
-    <div>
+    <div style={{ margin: 10 }}>
       <PostList />
     </div>
   )
