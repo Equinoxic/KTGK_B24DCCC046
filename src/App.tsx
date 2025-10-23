@@ -2,6 +2,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Layout from "./Layout"
 import TrangChu from "./Pages/TrangChu"
 import DangBai from "./Pages/DangBai"
+import PostContent from "./Pages/PostContent"
+import EditBai from "./Pages/EditBai"
 
 function App() {
 
@@ -11,8 +13,8 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<TrangChu />} />
           <Route path="/create" element={<DangBai /> }/>
-          <Route path="/posts/:id" />
-          <Route path="/posts/edit/:id" />
+          <Route path="/posts/:id" element={<PostContent />} />
+          <Route path="/posts/edit/:id" element={<EditBai />} />
         </Route>
       </Routes>
     </BrowserRouter>

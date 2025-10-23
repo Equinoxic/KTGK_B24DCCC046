@@ -17,6 +17,7 @@ function PostList() {
         display: "grid",
         gridTemplateColumns: "repeat(3, 1fr)",
         gap: "2rem",
+        width: "100%"
       }}>
         {posts.map((p) => (
           <div key={p.id}>

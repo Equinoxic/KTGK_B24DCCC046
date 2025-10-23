@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import Navbar from "./Components/Posts/Navbar";
 import samplePosts from "./sample";
 
 function Layout() {
@@ -9,25 +10,7 @@ function Layout() {
 
   return (
     <div style={{ height: "100%", width: "100%" }}>
-      <nav
-        style={{
-          height: "20%",
-          position: "sticky",
-          display: "flex",
-          top: 0,
-          borderRadius: "20px 0 20px 0",
-          zIndex: 10,
-          backgroundColor: "blue",
-          gap: "16px",
-          padding: "12px 20px",
-          alignItems: "center",
-          margin: "6px 12px"
-        }}
-      >
-        <Link to={"/"} className="navlink">Trang Chủ</Link>
-        <Link to={"/create"} className="navlink">Đăng Bài</Link>
-      </nav>
-
+      <Navbar />
       <div>
         <Outlet />
       </div>

@@ -2,7 +2,7 @@ import PostForm from "../Components/Posts/PostForm";
 
 function DangBai() {
   return (
-    <div>
+    <div style={{ margin: 10 }}>
       <PostForm />
     </div>
   )
