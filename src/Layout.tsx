@@ -1,6 +1,12 @@
+import { useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
+import samplePosts from "./sample";
 
 function Layout() {
+    useEffect(() => {
+      localStorage.setItem("posts", JSON.stringify(samplePosts));
+    }, []);
+
   return (
     <div style={{ height: "100%", width: "100%" }}>
       <nav
