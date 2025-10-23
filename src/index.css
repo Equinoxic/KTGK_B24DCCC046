@@ -9,4 +9,10 @@ body {
 .navlink {
   color: white;
   text-decoration: none;
+  border-radius: 6px;
+  padding: 4px 12px;
+}
+
+.active {
+  background-color: orange;
 }

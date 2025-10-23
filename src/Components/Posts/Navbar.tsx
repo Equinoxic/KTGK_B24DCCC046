@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 function Navbar() {
   return (
     <nav
       style={{
-        height: "20%",
+        height: "30px",
         position: "sticky",
         display: "flex",
         top: 0,
@@ -17,8 +17,8 @@ function Navbar() {
         margin: "6px 12px"
       }}
     >
-      <Link to={"/"} className="navlink">Trang Chủ</Link>
-      <Link to={"/create"} className="navlink">Đăng Bài</Link>
+      <NavLink to={"/"} className={({ isActive }) => `navlink ${isActive ? "active" : ""}`}>Trang Chủ</NavLink>
+      <NavLink to={"/create"} className={({ isActive }) => `navlink ${isActive ? "active" : ""}`}>Đăng Bài</NavLink>
     </nav>
   )
 }
